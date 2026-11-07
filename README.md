@@ -75,6 +75,14 @@ Among the four additional configurations, **Multinomial Naive Bayes with CountVe
 
 Therefore, Multinomial Naive Bayes with CountVectorizer was selected as the final model and integrated into the Streamlit application.
 
+## Application Screenshots
+
+### HAM Prediction
+![HAM Prediction](images/ham_prediction.png)
+
+### SPAM Prediction
+![SPAM Prediction](images/spam_prediction.png)
+
 ## Project Structure
 
 ```text
