@@ -38,16 +38,42 @@ A Streamlit web application allows users to enter an email message and get a pre
 
 ## Model Evaluation
 
-Two models were evaluated:
+### Model Evaluation
+
+#### 1. Initial Model Evaluation
+
+The initial evaluation compared two machine learning models: Logistic Regression and K-Nearest Neighbors (KNN).
 
 | Metric | Logistic Regression | KNN |
-|---|---:|---:|
+|:---|:---:|:---:|
 | Accuracy | 98.74% | 93.81% |
 | Spam Precision | 0.97 | 1.00 |
 | Spam Recall | 0.94 | 0.54 |
 | Spam F1-score | 0.95 | 0.70 |
 
-Logistic Regression achieved better overall performance, especially in detecting spam messages.
+Logistic Regression achieved better overall performance, especially in detecting spam messages, and was initially selected as the best-performing model.
+
+#### 2. Further Model Experiments
+
+To explore better performance, four additional configurations were evaluated using two text vectorization techniques (CountVectorizer and TF-IDF) with two classification algorithms (Logistic Regression and Multinomial Naive Bayes).
+
+| Metric | LR + Count | LR + TF-IDF | NB + Count | NB + TF-IDF |
+|:---|:---:|:---:|:---:|:---:|
+| Accuracy | 98.65% | 97.67% | **99.19%** | 96.32% |
+| Spam Precision | 1.00 | 1.00 | **1.00** | 1.00 |
+| Spam Recall | 0.90 | 0.83 | **0.94** | 0.72 |
+| Spam F1-score | 0.95 | 0.90 | **0.97** | 0.84 |
+
+#### 3. Final Model Selection
+
+Among the four additional configurations, **Multinomial Naive Bayes with CountVectorizer** achieved the best overall performance:
+
+- **Accuracy:** 99.19%
+- **Spam Precision:** 100%
+- **Spam Recall:** 93.96%
+- **Spam F1-score:** 96.89%
+
+Therefore, Multinomial Naive Bayes with CountVectorizer was selected as the final model and integrated into the Streamlit application.
 
 ## Project Structure
 
