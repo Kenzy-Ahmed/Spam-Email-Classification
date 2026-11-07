@@ -78,11 +78,10 @@ Therefore, Multinomial Naive Bayes with CountVectorizer was selected as the fina
 ## Application Screenshots
 
 ### HAM Prediction
-![HAM Prediction](images/ham_prediction.png)
+![HAM Prediction](images/Ham%20prediction.png)
 
 ### SPAM Prediction
-![SPAM Prediction](images/spam_prediction.png)
-
+![SPAM Prediction](images/Spam%20prediction.png)
 ## Project Structure
 
 ```text
